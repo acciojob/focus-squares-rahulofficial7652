@@ -4,14 +4,12 @@
   <meta charset="UTF-8">
   <title>Focus Squares</title>
   <style>
-    /* Center the squares on the page */
     body {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: #f4f4f4;
     }
 
     .container {
@@ -19,22 +17,24 @@
       gap: 20px;
     }
 
-    /* Base style for the squares */
+    /* Base Square Style */
     .square {
       width: 100px;
       height: 100px;
-      background-color: #E6E6FA; /* Lavender */
-      transition: background-color 0.3s ease;
+      /* #E6E6FA = rgb(230, 230, 250) */
+      background-color: rgb(230, 230, 250); 
     }
 
-    /* 1) Changes the color of non-hovered squares to Coffee */
+    /* Requirement 1: Change non-hovered squares to Coffee */
+    /* When the container is hovered, all squares turn Coffee */
     .container:hover .square {
-      background-color: #6F4E37; 
+      /* #6F4E37 = rgb(111, 78, 55) */
+      background-color: rgb(111, 78, 55);
     }
 
-    /* 2) Resets/Maintains the hovered square as Lavender */
+    /* Requirement 2: The actual hovered square stays/resets to Lavender */
     .container .square:hover {
-      background-color: #E6E6FA;
+      background-color: rgb(230, 230, 250);
     }
   </style>
 </head>
