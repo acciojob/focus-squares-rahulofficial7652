@@ -1,1 +1,18 @@
 /*  your css code here. If applicable */
+/* 1. Base State: Saare squares Lavender hone chahiye */
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(230, 230, 250); /* Lavender */
+  transition: background-color 0.3s ease; /* Smooth transition ke liye */
+}
+
+/* 2. Jab container par hover ho, tab saare squares Coffee ho jayein */
+.container:hover .square {
+  background-color: rgb(111, 78, 55); /* Coffee */
+}
+
+/* 3. LEKIN, jis specific square par mouse hai, wo Lavender hi rehna chahiye */
+.container .square:hover {
+  background-color: rgb(230, 230, 250); /* Lavender */
+}
