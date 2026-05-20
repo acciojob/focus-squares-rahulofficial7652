@@ -1,18 +1,35 @@
-/*  your css code here. If applicable */
-/* 1. Base State: Saare squares Lavender hone chahiye */
+/* Base styling: Body ko center mein flex karne ke liye */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+/* Container jisme teeno dabbe hain */
+.squares-container {
+    display: flex;
+    gap: 20px; /* Dabbon ke beech ka gap */
+}
+
+/* 1. Base State: Shuruat mein saare squares Lavender hone chahiye */
 .square {
-  width: 100px;
-  height: 100px;
-  background-color: rgb(230, 230, 250); /* Lavender */
-  transition: background-color 0.3s ease; /* Smooth transition ke liye */
+    width: 100px;
+    height: 100px;
+    background-color: #E6E6FA; /* Lavender Color */
+    transition: background-color 0.3s ease; /* Smooth color change animation */
 }
 
-/* 2. Jab container par hover ho, tab saare squares Coffee ho jayein */
-.container:hover .square {
-  background-color: rgb(111, 78, 55); /* Coffee */
+/* 2. Magic Logic: Jab kisi BHI square par hover hoga (yaani container par hover hua)
+   to saare squares ka rang badalkar Coffee color kar do */
+.squares-container:hover .square {
+    background-color: #6F4E37; /* Coffee Color */
 }
 
-/* 3. LEKIN, jis specific square par mouse hai, wo Lavender hi rehna chahiye */
-.container .square:hover {
-  background-color: rgb(230, 230, 250); /* Lavender */
+/* 3. Exceptions Logic: Lekin jis specific square par mouse actual mein hai (:hover),
+   use Coffee mat karo, use Lavender (`#E6E6FA`) hi rehne do */
+.squares-container .square:hover {
+    background-color: #E6E6FA; /* Lavender Color wapas aa jayega */
 }
